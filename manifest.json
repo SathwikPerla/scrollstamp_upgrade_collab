@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "ScrollStamp",
+  "version": "2.3.2",
+  "description": "Save the exact spot you were reading and jump right back to it",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ScrollStamp",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icon.png",
+        "icons/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

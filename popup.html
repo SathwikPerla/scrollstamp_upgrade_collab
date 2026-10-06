@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 360px; height: 480px; overflow: hidden;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrollStamp</title>
+  <script src="popup.js"></script>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body style="width: 360px; height: 480px; overflow: hidden; margin: 0; padding: 0;">
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="header-brand">
+        <span class="header-logo">
+          <img src="icon.png" width="22" height="22" alt="ScrollStamp" style="display: block; border-radius: 5px; object-fit: contain;">
+        </span>
+        <span class="header-title">ScrollStamp</span>
+        <span class="version">v2.3</span>
+      </div>
+      <span id="mode-badge" class="mode-badge">—</span>
+    </header>
+
+    <div id="site-control" class="site-control">
+      <span id="site-hostname" class="site-hostname" title="Current site">—</span>
+      <button id="site-toggle" class="site-toggle" role="switch" aria-checked="false" aria-label="Enable or disable ScrollStamp on this site">
+        <span class="site-toggle-knob"></span>
+      </button>
+    </div>
+
+    <div id="stamps-container">
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon" style="opacity: 0.6;">
+          <img src="icon.png" width="44" height="44" alt="ScrollStamp" style="display: block; margin: 0 auto; border-radius: 8px; object-fit: contain;">
+        </div>
+        <p class="empty-title">No bookmarks yet</p>
+        <span id="empty-hint" class="empty-hint">Select text on any page to bookmark it</span>
+      </div>
+      <ul id="stamps-list"></ul>
+    </div>
+
+    <footer class="popup-footer">
+      <button id="clear-all" class="btn-clear" title="Delete all bookmarks">
+        🗑 Clear All
+      </button>
+      <a href="https://github.com/SathwikPerla/ScrollStamp" target="_blank" class="github-link" title="View source on GitHub">
+        GitHub
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
